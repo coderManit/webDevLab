@@ -1,0 +1,14 @@
+assignment 1
+-> Create a static webpage using <table> tag of HTML
+
+assignment 2
+-> Create a static webpage which defines all text formatting tags of HTML in tabular format
+
+assignment 3
+-> Create a webpage using <ul>list tags of HTML
+
+assignment 4
+-> Create webpage to include an image using HTML tags
+
+assignment 5
+-> Create student registration webpage using HTML form objects
