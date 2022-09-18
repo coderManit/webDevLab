@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+
+        html {
+            font-size: 62.5%;
+            height: 100%;
+        }
+
+        body {
+            box-sizing: border-box;
+            background: linear-gradient(to right bottom, #6C7B65, #85A403);
+            font-family: sans-serif;
+            font-weight: bold;
+
+        }
+
+        .backg {
+
+            width: 50%;
+            margin: 20rem auto;
+            border-radius: 2rem;
+            overflow: hidden;
+            box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.3);
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            font-size: 2rem;
+            color: white;
+            
+        }   
+
+        .list-item {
+            position: relative;
+            padding: 2rem;
+            background: #85A403;
+            cursor: pointer;
+        }
+
+
+        .list-item::before{
+            content: '';
+            background-color: white;
+            width: 3px;
+            height: 100%;
+
+            transform: scaleY(0);
+            
+            position: absolute;
+            top:0;
+            left:0;
+            
+            transition: transform .2s,
+                        width .3s cubic-bezier(.17,.67,.83,.67) .2s;
+            
+        }
+
+        .list-item:hover::before{
+            transform: scaleY(1);
+            width: 100%;
+            z-index: -1;
+        }
+
+        .list-item:hover{
+            color: #328018c2;
+            z-index: 1;
+        }
+
+    </style>
+
+    <title>Assignment 3</title>
+</head>
+
+<body>
+    <div class="backg">
+
+        <ul>
+            <li class="list-item">&lt;li&gt; tag one</li>
+            <li class="list-item">&lt;li&gt; tag two</li>
+            <li class="list-item">&lt;li&gt; tag three</li>
+            <li class="list-item">&lt;li&gt; tag four</li>
+            <li class="list-item">&lt;li&gt; tag five</li>
+        </ul>
+
+    </div>
+
+</body>
+
+</html>
