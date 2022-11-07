@@ -1,0 +1,151 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    padding-bottom: 5rem;
+    font-size: 1.6rem;
+
+    font-family: 'Inter', sans-serif;
+    height: 150vh;
+    background-image: linear-gradient(to right bottom, rgba(189, 195, 199, .8) 55%, rgba(44, 62, 80, 1)),
+        url("https://raw.githubusercontent.com/coderManit/webDevLab/main/loginPage(9-12-22)/manit-image.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.logo-img {
+    display: block;
+    margin: 3rem auto;
+    height: 10rem;
+
+}
+
+.logo {
+    color: white;
+    text-align: center;
+    font-weight: 800;
+    font-size: 5rem;
+
+    margin: 5rem;
+}
+
+
+.container {
+    display: flex;
+    padding: 3rem 0;
+}
+
+.list {
+    list-style-type: none;
+    font-size: 2rem;
+    font-weight: 500;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.link:link,
+.link:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.item {
+    position: relative;
+    padding: 2rem;
+    cursor: pointer;
+    flex: 1;
+}
+
+.item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    height: 100%;
+    width: 3px;
+
+    transform: scaleY(0);
+
+    background-color: white;
+
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+        background-color 0.1s
+}
+
+.item:hover::before {
+    transform: scaleY(1);
+    width: 100%;
+}
+
+.content {
+    margin-left: 20rem;
+    width: 80ch;
+    align-self: center;
+    line-height: 3rem;
+}
+
+.acad {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2rem;
+}
+
+ul{
+    list-style: none;
+}
+
+.department_list {
+    line-height: 5rem;
+}
+
+.sublist {
+    margin-left: 2rem;
+}
+
+.department{
+    display: flex;
+}
+.dep{
+    width:50ch;
+    margin-right: 5rem;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.g-img{
+    height: 13rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+
+    transition: all .3s;
+}
+
+.g-img:hover{
+    transform: scale(1.5);
+    z-index: 1;
+}
+.gallery:hover .g-img:not(:hover){
+    transform: scale(.95);
+}
