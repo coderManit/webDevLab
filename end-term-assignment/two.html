@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+    <style>
+
+        *, *::before, *::after{
+            margin:0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+
+        html{
+            font-size: 62.5%;
+
+        }
+
+        body{
+            box-sizing: border-box;
+
+        }
+
+        form{
+            width: 50%;
+            margin: 10rem auto;
+            font-size: 2rem;
+
+            padding: 2rem;
+            background-color: rgba(206, 206, 206, 0.075);
+        }
+        h1{
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+        }
+        .well{
+            display: flex;
+            margin: 2rem;
+            
+        }
+
+        .form-item{
+            padding: 2rem;
+        }
+
+        input, select, textarea{
+            margin-top: 1rem;
+        }
+
+        input{
+            border: 1px solid rgba(0, 0, 0, 0.205);
+            border-radius: .5rem;
+            padding: 1rem 1rem;
+        }
+        input:focus{
+            outline: 1px solid blue;
+            border: none;
+        }
+        .space-between{
+            justify-content: space-between;
+        }
+
+        button{
+            font-size: 1.6rem;
+            font-weight: bold;
+            background-color: transparent;
+
+            border: 2px solid #435555e1;
+            color: #435555e1;
+            padding: 1rem 3rem;
+
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <form action="#">
+        <h1>Fill the Form</h1>
+        <div class="well">
+
+            <div class="form-item">
+                <label for="first_name">First Name</label>
+                <input type="text">
+            </div>
+            <div class="form-item">
+                <label for="last_name">Last Name</label>
+                <input type="text">
+            </div>
+            <div class="form-item">
+                <label for="gender">Gender </label>
+                <select name="gender" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            
+        </div>
+
+        <div class="well">
+            <div class="form-item">
+                <label for="dob">DOB</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+
+            <div class="form-item">
+                <label for="contact">Contact no</label>
+                <input type="tel" id="contact" name="contact" pattern="[0-9]{10}">
+            </div>
+            <div class="form-item">
+                <label for="add">Address</label>
+                <textarea type="text" id="add" name="add" placeholder="enter address with pincode...."></textarea>
+            </div>
+        </div>
+        <div class="well">
+            <div class="form-item">
+                <label for="subject">Subject of Interest</label>
+                <input type="text" for="subject">
+            </div>
+            <div class="form-item">
+                <label for="lang">Language known</label>
+                <input type="text" for="lang">
+            </div>
+        </div>
+        <div class="well space-between">
+            <div class="form-item">
+                <button type="submit">Submit</button>
+                
+            </div>
+            <div class="form-item ">
+
+                <button type="reset">Reset</button>
+            </div>
+        </div>
+    </form>
+    
+</body>
+</html>
+
+<!-- 
+
+    contact no , address pincode, state country 
+    Reset Button submit button
+
+ -->

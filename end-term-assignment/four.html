@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            margin: 100px auto;
+            border: 1px solid #2b2b2b54;
+            width: fit-content;
+            border-radius: 3px;
+        }
+        .saffron, .white, .green{
+            width: 1200px;
+            height: 200px;
+            background-color:  #FF9933;
+            cursor: pointer;
+            
+        }
+        .white{
+            background-color: #fff;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .green{
+            background-color: #138808;
+            color: #138808;
+        }
+        .chakra{
+            height: 180px;
+        }
+        .white:hover, .saffron:hover, .green:hover{
+            box-shadow: 0 1px 2px 2px rgba(0,0,0,0.2);
+        }
+        .display-none{
+            display: none;
+        }
+        .saffron-color{
+            color:  #FF9933;
+        }
+        .green-color{
+            color: #138808;
+        }
+
+        .white-color{
+            color: black;
+        }
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="saffron">&nbsp;</div>
+        <div class="white">
+            <img src="images/chakra-flag.png" alt="chakra" class="chakra">
+        </div>
+        <div class="green">
+            &nbsp;
+        </div> 
+    </div>
+
+        <script>
+            const DETAILS = {
+                "saffron": "In the national flag of India the top band is of Saffron colour, indicating the strength and courage of the country",
+                "white": "The white middle band indicates peace and truth with Dharma Chakra",
+                "green": "The last band is green in colour shows the fertility, growth and auspiciousness of the land"
+            };
+
+            const displayDetails = color =>{
+                const colorToClassMap = {
+                    "saffron": "saffron-color",
+                    "green": "green-color",
+                    "white": "white-color"
+                }
+                const h1 = document.createElement('h1');
+                h1.appendChild(document.createTextNode(`Information about ${color} color`));
+
+                h1.style=`
+                            text-align: center;
+                            margin: 30px;
+                        `;
+                h1.className = colorToClassMap[color];
+                document.body.appendChild(h1);
+                
+                const p = document.createElement('p');
+                p.appendChild(document.createTextNode(`${DETAILS[color]}`));
+                p.style = `
+                    width: 50ch;
+                    margin: 100px auto;
+                    text-align: center;
+                    font-size: 24px;
+                `;
+                document.body.appendChild(p);
+                const div = document.createElement('div');
+                const button = document.createElement('button');
+                button.appendChild(document.createTextNode("Go Back"));
+                div.appendChild(button);
+                
+                button.addEventListener('click', ()=> location.reload());
+
+                div.style = `text-align: center;`;
+                
+                document.body.appendChild(div);
+                
+
+            }
+
+            const orange = document.querySelector('.saffron'),
+                white = document.querySelector('.white'),
+                green = document.querySelector('.green');
+
+            let arr = [orange, white, green];
+
+            arr.map(ele => ele.addEventListener('click', e=>{
+                color = e.target.className;
+                if(color === 'chakra') return;
+                e.target.parentElement.className = "display-none";
+                displayDetails(color);
+            }));
+
+        </script>
+
+</body>
+</html>
