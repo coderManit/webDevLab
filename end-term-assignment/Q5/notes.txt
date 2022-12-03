@@ -1,0 +1,2 @@
+primary color red: #a41931
+primary color grey: #8b8c8d
