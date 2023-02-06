@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  
+  
+  <style>
+    .buttonBox{
+      display: flex;
+      justify-content: space-evenly;
+      font-size: 20px;
+    }
+    .buttonBox button{
+      font-size: 20px;
+      width: 50px;
+    }
+    .ans{
+      box-sizing: border-box;
+      background-color: #cfcfcf;
+      font-size: 50px;
+      color: white;
+      margin: 30px;
+      height: 100px;
+      width: 300px;
+      text-align: center;
+      padding: 20px;
+    }
+    
+  </style>
+</head>
+<body>
+   <label for="num1">Number 1: </label><input id="num1" type="text">
+  <br><br>
+   <label for="num2">Number 2: </label><input id="num2" type="text">
+    <br><br>
+  <div class="buttonBox">
+    <button onclick="addNum()" id="add">+</button>
+    <button onclick="subNum()" id="sub">-</button>
+    <button onclick="mulNum()" id="mul">*</button>
+    <button onclick="divNum()" id="div">/</button>
+  </div>
+  <div class="ans">
+      69
+  </div>
+  
+  
+  <script>
+    let num1 = document.getElementById('num1');
+    let num2 = document.getElementById('num2');
+    let ans = document.querySelector('.ans');
+
+
+    function showContent(item){
+      ans.innerHTML=item;
+    }
+
+    function addNum(){
+      x = parseInt(num1.value);
+      y = parseInt(num2.value);
+      showContent(x+y);
+    }
+
+    function subNum(){
+      x = parseInt(num1.value);
+      y = parseInt(num2.value);
+      showContent(x-y);
+    }
+
+    function mulNum(){
+      x = parseInt(num1.value);
+      y = parseInt(num2.value);
+      showContent(x*y);
+    }
+
+    function divNum(){
+      x = parseInt(num1.value);
+      y = parseInt(num2.value);
+      showContent(x/y);
+    }
+
+  </script>
+
+</body>  
+</html>
